@@ -38,6 +38,7 @@ return {
     },
     {
       "rcarriga/cmp-dap",
+      enabled = function() return require("astrocore").is_available "nvim-cmp" end,
       dependencies = { "nvim-cmp" },
       config = function(...) require "astronvim.plugins.configs.cmp-dap"(...) end,
     },
